@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+  <title>Q - Scoreboard</title>
+</head>
+
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+
+  body.debug [class*="d-flex"] {
+    outline: 2px dotted rgb(139, 34, 121);
+    outline-offset: -3px;
+  }
+</style>
+
+<body class="bg-black">
+
+  <header class="container-fluid">
+    <h1 class="text-white">Scoreboard!</h1>
+
+  </header>
+
+  <main class="container-fluid p-5">
+
+    <section class="row hero-img align-items-center text-center">
+
+
+      <!-- main display will all be in here -->
+      <div class="col-12 p-5 text-black">
+        <!-- scoreboard -->
+
+        <div class="card glassCard score-holder p-5">
+          <!-- glass card begin -->
+          <span class="mx-5 fw-bold display-3">Home</span>
+
+          <span class="mx-5 fw-bold display-3">Away</span>
+          <!-- cards are in this div -->
+          <div class="d-flex justify-content-evenly p-3">
+            <!-- card 1 begin -->
+            <div class="card mx-3 bg-transparent">
+              <span id="sc-home-elem" class="display-1 fw-bolder">00</span>
+
+            </div>
+            <!-- card 1 end -->
+            <!-- card 2 begin -->
+
+            <div class="card mx-3 p-1 bg-transparent">
+              <span id="sc-away-elem" class="display-1 fw-bolder">00</span>
+
+            </div>
+            <!-- card 2 end -->
+          </div>
+          <!-- button section -->
+          <section class="row">
+            <div class="col-6">
+              <button id="sc-home-plus" class="rounded-pill bg-primary" onclick="changeScore('plus-home')">Score +</button>
+              <button id="sc-home-minus" class="rounded-pill bg-primary" onclick="changeScore('minus-home')">Score -</button>
+            </div>
+            <div class="col-6">
+              <button id="sc-away-plus" class="rounded-pill bg-primary" onclick="changeScore('plus-away')">Score +</button>
+              <button id="sc-away-minus" class="rounded-pill bg-primary" onclick="changeScore('minus-away')">Score -</button>
+            </div>
+            <div class="col-12">
+              <button  onclick="changeScore('reset')" class="btn bg-danger">Reset</button>
+            </div>
+          </section>
+        </div>
+        <!-- glass card end -->
+      </div>
+      </div>
+
+
+      </div>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+</body>
+
+</html>
